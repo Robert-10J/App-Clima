@@ -7,9 +7,7 @@
     --fontBold: 700;
 }
 
-html {
-    box-sizing: border-box;
-}
+html { box-sizing: border-box; }
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -25,21 +23,13 @@ body {
     font-size: 3rem;
     text-align: center;
     color: #fff;
+    margin-bottom: 5rem;
 }
 
 .contenedor {
     max-width: 120rem;
     width: 70%;
     margin: 0 auto; 
-}
-
-.principal {
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem ;
-    border-radius: 1rem;
-    padding: 8rem 5rem 4rem 5rem;
-    gap: 5rem;
 }
 
 .info { margin: 1rem 2rem 0 5rem; }
@@ -88,9 +78,7 @@ body {
     width: 1rem;
 }
 
-.resultados {
-    margin-top: -3em;
-}
+.resultados { padding-top: 2rem; }
 .resultados p {
     font-size: 1.2rem; 
     line-height: 2;
@@ -103,21 +91,56 @@ body {
 .resultados p {
     font-weight: var(--fontBold);
 }
+
+/* RESPONSIVE */
+.info { margin:0 auto; }
+.principal { margin-top: -2rem; }
+.resultados { margin-top: 3rem; }
 .resultados img {
-    width: 9rem;
     margin-left: 5rem;
+    margin-top: -2rem;
 }
 
 .alert {
     background-color: var(--pink);
-    padding: .3rem 5rem .3rem 5rem;
     border-radius: 1rem;
-    margin: 5rem 0 0 5rem;
-}
-.alert span, p {
-    font-size: 1.5rem;
-    font-weight: var(--fontBold);
+    padding: .5rem;
     text-align: center;
-    text-transform: uppercase;
+}
+.alert span {
     color: #fff;
+    font-weight: var(--fontBold);
+    font-size: 1.2rem;
+}
+
+@media (min-width: 480px) {
+    .principal {
+        display: grid;
+        grid-template-columns: 1fr 2fr;    
+    }
+    .resultados img {
+        width: 9rem;
+        margin-left: 18rem;
+    }
+    .info {
+        margin-top: 10rem;
+        margin-left: 10rem;
+    }
+
+    .alert {
+        background-color: var(--pink);
+        padding: .3rem 5rem .3rem 5rem;
+        border-radius: 1rem;
+        margin: 5rem 0 0 5rem;
+    }
+    .alert span, p {
+        font-size: 1.5rem;
+        font-weight: var(--fontBold);
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .alert span {
+        font-size: 1.2rem;
+    }
 }
